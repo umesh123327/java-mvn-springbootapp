@@ -1,37 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loksai-eta-deploy
+  name: umesh-ba-deploy
   labels:
-    app: loksai-eta-deploy-lbl
+    app: umesh-ba-deploy-lbl
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: loksai-eta-app
+      app: umesh-ba-app
   template:
     metadata:
       labels:
-        app: loksai-eta-app
+        app:umesh-ba-app
     spec:
       containers:
-      - name: loksai-eta-container
-        image: loksaieta/sa-wd-webapp
+      - name: umesh-ba-container
+        image: umesh123321/sa-wd-webapp
         ports:
         - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: loksai-eta-np-service
+  name: umesh-ba-np-service
   labels:
-    app: loksai-eta-app
+    app:  umesh-ba-app
 spec:
   selector:
-    app: loksai-eta-deploy-lbl
+    app:  umesh-ba-deploy-lbl
 
   type: NodePort
   ports:
-  - nodePort: 31028
+  - nodePort: 31027
     port: 8080
     targetPort: 8080
