@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: loksai-eta-container
-        image: loksaieta/loksai-eta-app
+        image: umesh123321/sa-webappimg
         ports:
         - containerPort: 8080
 ---
@@ -32,7 +32,6 @@ spec:
 
   type: NodePort
   ports:
-  - nodePort: 31028
+  - nodePort: 31027
     port: 8080
     targetPort: 8080
-
