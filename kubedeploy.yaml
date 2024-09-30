@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: loksai-eta-container
-        image: umesh123321/sa-webappimg
+        image: umesh123321/sa-wd-webapp
         ports:
         - containerPort: 8080
 ---
