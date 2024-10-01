@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: loksai-eta-container
-        image: umesh123321/sa-wd-webapp
+        image: umesh123321/sa-wd-webapp:latest
         ports:
         - containerPort: 8080
 ---
@@ -32,6 +32,6 @@ spec:
 
   type: NodePort
   ports:
-  - nodePort: 31027
+  - nodePort: 31029
     port: 8080
     targetPort: 8080
